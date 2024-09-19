@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: seu-registro/frontend-image:latest
+        image: tvilarim/eng-java-fe-image:latest
         ports:
         - containerPort: 80
 ---
