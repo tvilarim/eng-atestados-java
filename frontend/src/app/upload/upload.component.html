@@ -1,0 +1,12 @@
+<div class="upload-container">
+    <h2>Selecione um arquivo PDF para upload</h2>
+    <input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
+    <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+  
+    <div *ngIf="extractedData" class="result">
+      <h3>Dados Extraídos:</h3>
+      <p><strong>Data de Início:</strong> {{ extractedData.startDate }}</p>
+      <p><strong>Conclusão Efetiva:</strong> {{ extractedData.endDate }}</p>
+      <p><strong>Conteúdo Extraído:</strong> {{ extractedData.extractedContent }}</p>
+    </div>
+  </div>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
+  styleUrls: ['./upload.component.css']
 })
 export class UploadComponent {
   selectedFile: File | null = null;
@@ -25,7 +26,7 @@ export class UploadComponent {
           this.extractedData = data;
         },
         (error) => {
-          console.error('Error uploading PDF', error);
+          console.error('Erro ao fazer upload do PDF', error);
         }
       );
     }
